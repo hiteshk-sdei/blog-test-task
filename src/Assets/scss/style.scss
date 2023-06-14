@@ -1,0 +1,279 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+// Colors
+:root {
+  --bg-light: #f6f7fb;
+  --grey-light: #ebebeb;
+  --grey-dark: #666666;
+  --primary-color: #422ed1;
+  --primary-color-2: #5240d3;
+  --primary-light: #dcd8ff;
+  --primary-light-2: #e1e1f5;
+  --white-color: #ffffff;
+  --green-primary: #2a9d21;
+  --green-light: #dbfdd8;
+  --red-primary: #ee2d2d;
+  --red-primary-2: #ed5252;
+  --red-light: #ffd8d8;
+  --yellow-primary: #dda60d;
+  --yellow-light: #fff4d7;
+  --black-color: #000000;
+}
+
+// Global styles
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: var(--bg-light);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Poppins", sans-serif !important;
+}
+.MuiButtonBase-root.btn-primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: none;
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 8px 35px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  gap: 8px;
+  &:hover {
+    background-color: var(--primary-color-2);
+    box-shadow: none;
+  }
+}
+.MuiButtonBase-root.btn-primary-outlined {
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: none;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 8px 35px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  gap: 8px;
+  &:hover {
+    background-color: var(--white-color);
+    box-shadow: none;
+  }
+}
+.MuiButtonBase-root.btn-danger {
+  background-color: var(--red-primary);
+  border: 1px solid var(--red-primary);
+  box-shadow: none;
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 8px 35px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  gap: 8px;
+  &:hover {
+    background-color: var(--red-primary-2);
+    box-shadow: none;
+  }
+}
+.MuiButtonBase-root.back-btn {
+  margin-bottom: 30px;
+}
+.main-heading.MuiTypography-root {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.sub-heading.MuiTypography-root {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.sub-heading-text.MuiTypography-root {
+  font-size: 14px;
+  margin-top: 6px;
+  color: var(--grey-dark);
+}
+
+// Topic page styles
+.filter-tabs.MuiTabs-root {
+  overflow: visible;
+  .MuiTabs-scroller {
+    overflow: visible !important;
+  }
+  .MuiTabs-indicator {
+    display: none;
+  }
+  .MuiTabs-flexContainer {
+    gap: 10px;
+    .MuiTab-root {
+      background-color: var(--primary-light-2);
+      border-radius: 12px;
+      padding: 10px;
+      text-transform: capitalize;
+      min-height: auto;
+      font-size: 14px;
+      color: var(--black-color);
+      &.Mui-selected {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+      }
+    }
+  }
+}
+.page-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.topic-card-ui.MuiPaper-root {
+  border-radius: 20px;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.0392156863);
+  margin-bottom: 20px;
+  padding: 15px;
+  .topic-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .topic-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .MuiChip-root {
+      background-color: var(--primary-light);
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+      &:nth-child(2) {
+        background-color: var(--green-light);
+        color: var(--green-primary);
+        border-color: var(--green-primary);
+      }
+      &:nth-child(3) {
+        background-color: var(--red-light);
+        color: var(--red-primary);
+        border-color: var(--red-primary);
+      }
+      &:nth-child(4) {
+        background-color: var(--yellow-light);
+        color: var(--yellow-primary);
+        border-color: var(--yellow-primary);
+      }
+    }
+  }
+  .topic-card-btns {
+    justify-content: flex-end;
+    gap: 10px;
+    .MuiButtonBase-root {
+      margin: 0;
+      border-radius: 12px;
+      border: 1px solid;
+      &.MuiIconButton-colorError {
+        border-color: var(--red-primary);
+        background-color: var(--red-light);
+        color: var(--red-primary);
+      }
+      &.MuiIconButton-colorGreen {
+        border-color: var(--green-primary);
+        background-color: var(--green-light);
+        color: var(--green-primary);
+      }
+    }
+  }
+}
+
+// Form styles
+.form-wrapper-ui.MuiPaper-root {
+  border-radius: 15px;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.0392156863);
+  margin-bottom: 20px;
+  padding: 25px;
+  .select-multi input {
+    min-height: 42px;
+  }
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
+
+// Editor styles
+.custom-editor {
+  margin-bottom: 20px;
+  .ck-editor {
+    .ck-toolbar {
+      border: none;
+      border-top-left-radius: 12px !important;
+      border-top-right-radius: 12px !important;
+    }
+    .ck-editor__editable {
+      border: none !important;
+      border-top: 1px solid var(--grey-light) !important;
+      border-bottom-left-radius: 12px !important;
+      border-bottom-right-radius: 12px !important;
+      min-height: 200px;
+    }
+  }
+}
+.ck-powered-by {
+  display: none !important;
+}
+
+// Modal styles
+.custom-modal {
+  .MuiPaper-root {
+    padding: 25px;
+    border-radius: 20px;
+    .MuiDialogContent-root {
+      padding: 0;
+      .MuiDialogContentText-root {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--black-color);
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Blog detail styles
+.blog-details {
+  .MuiTypography-root.blog-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 14px;
+    color: var(--grey-dark);
+    float: left;
+    margin-right: 10px;
+  }
+  img {
+    border-radius: 10px;
+    width: 300px;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .no-details-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 20px;
+    p {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
